@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30428.66
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AJBellTech", "AJBellTech\AJBellTech.csproj", "{DB3FF391-ED14-43E8-9570-D1B78E1E3FFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AJBellTech", "AJBellTech\AJBellTech.csproj", "{DB3FF391-ED14-43E8-9570-D1B78E1E3FFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AJBellTech.Test", "AJBellTech.Test\AJBellTech.Test.csproj", "{7EA425DA-C910-4ACE-A5E1-67B9B13EECF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AJBellTech.Core", "AJBellTech.Core\AJBellTech.Core.csproj", "{6D7A6A9E-C2AD-475B-B88D-ABC0091C874C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{DB3FF391-ED14-43E8-9570-D1B78E1E3FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB3FF391-ED14-43E8-9570-D1B78E1E3FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB3FF391-ED14-43E8-9570-D1B78E1E3FFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EA425DA-C910-4ACE-A5E1-67B9B13EECF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EA425DA-C910-4ACE-A5E1-67B9B13EECF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EA425DA-C910-4ACE-A5E1-67B9B13EECF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EA425DA-C910-4ACE-A5E1-67B9B13EECF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D7A6A9E-C2AD-475B-B88D-ABC0091C874C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D7A6A9E-C2AD-475B-B88D-ABC0091C874C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D7A6A9E-C2AD-475B-B88D-ABC0091C874C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D7A6A9E-C2AD-475B-B88D-ABC0091C874C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
