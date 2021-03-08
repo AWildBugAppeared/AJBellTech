@@ -15,6 +15,11 @@ namespace AJBellTech.Core.Clients
             _client = httpClient;
         }
 
+        public Task<HttpResponseMessage> GetBtcAmountFromCurrency(string currency, decimal amount)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<HttpResponseMessage> GetTickerData()
         {
             var response = await _client.GetAsync("");

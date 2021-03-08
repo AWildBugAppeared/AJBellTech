@@ -5,6 +5,7 @@ namespace AJBellTech.Core.Clients.Interfaces
 {
     public interface ITickerClient
     {
+        Task<HttpResponseMessage> GetBtcAmountFromCurrency(string currency, decimal amount);
         Task<HttpResponseMessage> GetTickerData();
     }
 }

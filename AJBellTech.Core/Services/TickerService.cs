@@ -15,6 +15,17 @@ namespace AJBellTech.Core.Services
             _tickerClient = tickerClient;
         }
 
+        public async Task<decimal?> GetBtcAmountFromCurrency(string currency, decimal amount)
+        {
+            var response = await _tickerClient.GetBtcAmountFromCurrency(currency, amount);
+
+            if (!response.IsSuccessStatusCode)
+                return null;
+
+            var tickerData = JsonConvert.DeserializeObject<decimal>(await response.Content.ReadAsStringAsync());
+            return tickerData;
+        }
+
         public async Task<TickerData> GetTickerData()
         {
             var response = await _tickerClient.GetTickerData();
@@ -22,9 +33,9 @@ namespace AJBellTech.Core.Services
             if (!response.IsSuccessStatusCode)
                 return null;
 
-            var test = await response.Content.ReadAsStringAsync();
             var tickerData = JsonConvert.DeserializeObject<TickerData>(await response.Content.ReadAsStringAsync());
             return tickerData;
         }
     }
 }
+ 
