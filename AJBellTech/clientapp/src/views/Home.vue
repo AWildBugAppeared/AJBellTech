@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>AJ Bell Investment Platform</h1>
+    <h1 class="pa-8 white--text">AJ Bell Investment Platform</h1>
     <Ticker></Ticker>
   </div>
 </template>

@@ -1,4 +1,4 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 
 namespace AJBellTech.Core.Models
 {
@@ -6,7 +6,7 @@ namespace AJBellTech.Core.Models
     {
         public decimal Buy { get; set; }
 
-        [JsonPropertyName("15m")]
+        [JsonProperty("15m")]
         public decimal FifteenMinute { get;set; }
         public decimal Last { get; set; }
         public decimal Sell { get; set; }

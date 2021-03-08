@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using AJBellTech.Core.Clients;
 using AJBellTech.Core.Clients.Interfaces;
+using AJBellTech.Core.Services;
+using AJBellTech.Core.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -28,12 +30,25 @@ namespace AJBellTech
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("VueCorsPolicy", builder =>
+                {
+                    builder
+                      .AllowAnyHeader()
+                      .AllowAnyMethod()
+                      .AllowCredentials()
+                      .WithOrigins("http://localhost:8080");
+                });
+            });
             services.AddHttpClient<ITickerClient, TickerClient>();
             services.AddControllers().AddNewtonsoftJson(options =>
             {
                 options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
             }); ;
+
+            services.AddScoped<ITickerService, TickerService>();
 
             services.AddSpaStaticFiles(configuration =>
             {
@@ -46,6 +61,7 @@ namespace AJBellTech
         {
             if (env.IsDevelopment())
             {
+                app.UseCors("VueCorsPolicy");
                 app.UseDeveloperExceptionPage();
             }
 

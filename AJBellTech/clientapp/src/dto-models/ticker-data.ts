@@ -1,27 +1,27 @@
-import { TickerDataItem } from "./ticker-data-item";
+import { ITickerDataItem } from "./ticker-data-item";
 
-export interface TickerData {
-  uSD: TickerDataItem;
-  aUD: TickerDataItem;
-  bRL: TickerDataItem;
-  cAD: TickerDataItem;
-  cHF: TickerDataItem;
-  cLP: TickerDataItem;
-  cNY: TickerDataItem;
-  dKK: TickerDataItem;
-  eUR: TickerDataItem;
-  gBP: TickerDataItem;
-  hKD: TickerDataItem;
-  iNR: TickerDataItem;
-  iSK: TickerDataItem;
-  jPY: TickerDataItem;
-  kRW: TickerDataItem;
-  nZD: TickerDataItem;
-  pLN: TickerDataItem;
-  rUB: TickerDataItem;
-  sEK: TickerDataItem;
-  sGD: TickerDataItem;
-  tHB: TickerDataItem;
-  tRY: TickerDataItem;
-  tWD: TickerDataItem;
+export interface ITickerData {
+  uSD: ITickerDataItem;
+  aUD: ITickerDataItem;
+  bRL: ITickerDataItem;
+  cAD: ITickerDataItem;
+  cHF: ITickerDataItem;
+  cLP: ITickerDataItem;
+  cNY: ITickerDataItem;
+  dKK: ITickerDataItem;
+  eUR: ITickerDataItem;
+  gBP: ITickerDataItem;
+  hKD: ITickerDataItem;
+  iNR: ITickerDataItem;
+  iSK: ITickerDataItem;
+  jPY: ITickerDataItem;
+  kRW: ITickerDataItem;
+  nZD: ITickerDataItem;
+  pLN: ITickerDataItem;
+  rUB: ITickerDataItem;
+  sEK: ITickerDataItem;
+  sGD: ITickerDataItem;
+  tHB: ITickerDataItem;
+  tRY: ITickerDataItem;
+  tWD: ITickerDataItem;
 }

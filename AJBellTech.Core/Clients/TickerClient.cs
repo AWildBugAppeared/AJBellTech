@@ -17,7 +17,7 @@ namespace AJBellTech.Core.Clients
 
         public async Task<HttpResponseMessage> GetTickerData()
         {
-            var response = await _client.GetAsync("/");
+            var response = await _client.GetAsync("");
             return response;
         }
     }

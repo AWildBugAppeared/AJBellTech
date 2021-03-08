@@ -22,6 +22,7 @@ namespace AJBellTech.Core.Services
             if (!response.IsSuccessStatusCode)
                 return null;
 
+            var test = await response.Content.ReadAsStringAsync();
             var tickerData = JsonConvert.DeserializeObject<TickerData>(await response.Content.ReadAsStringAsync());
             return tickerData;
         }
