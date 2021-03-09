@@ -24,11 +24,12 @@ namespace AJBellTech.Controllers
         [HttpGet]
         public async Task<ActionResult> GetBtcAmountFromCurrency([FromQuery] string currency, decimal amount)
         {
+            currency = currency.ToUpper();
             if (!BTC.AcceptableCurrenciesForBtcConversion.Contains(currency))
                 return BadRequest($"{currency} is not a valid currency to convert into BTC");
 
             if (amount <= 0 || amount >= 1000000)
-                return BadRequest($"{amount} should be greater than 0 and less than 1000000");
+                return BadRequest($"Amount: {amount} must be greater than 0 and less than 1000000");
 
             var btcValue = await _tickerService.GetBtcAmountFromCurrency(currency, amount);
 

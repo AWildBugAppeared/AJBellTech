@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home.vue rendering should render components 1`] = `
+<div>
+  <h1 class="pa-8 white--text">AJ Bell Investment Platform</h1>
+  <ticker-stub></ticker-stub>
+  <tickercurrencyconverter-stub></tickercurrencyconverter-stub>
+</div>
+`;

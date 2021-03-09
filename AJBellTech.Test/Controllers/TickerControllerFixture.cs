@@ -54,7 +54,7 @@ namespace AJBellTech.Test.Controllers
 
             //Assert
             Assert.IsType<BadRequestObjectResult>(result);
-            Assert.Equal($"{amount} should be greater than 0 and less than 1000000", result!.Value);
+            Assert.Equal($"Amount: {amount} must be greater than 0 and less than 1000000", result!.Value);
         }
 
         [Fact]
@@ -93,13 +93,13 @@ namespace AJBellTech.Test.Controllers
         {
             //Arrange
             var amount = 20;
-            var currency = "GBP";
+            var currency = "gbp";
 
             var expected = 0.00001M;
-            _tickerService.Setup(x => x.GetBtcAmountFromCurrency(currency, amount)).ReturnsAsync(expected);
+            _tickerService.Setup(x => x.GetBtcAmountFromCurrency(currency.ToUpper(), amount)).ReturnsAsync(expected);
 
             //Act
-            var result = (await _controller.GetBtcAmountFromCurrency("GBP", 20)) as OkObjectResult;
+            var result = (await _controller.GetBtcAmountFromCurrency(currency, 20)) as OkObjectResult;
 
             //Assert
             Assert.IsType<OkObjectResult>(result);
